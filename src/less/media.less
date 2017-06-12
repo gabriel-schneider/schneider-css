@@ -1,0 +1,52 @@
+// main: schneider.less
+
+@import 'variables';
+
+.media {
+    display: flex;
+    flex-flow: row nowrap;
+    &:not(:last-child)
+    {
+        margin-bottom: 0.5em;
+    }
+
+    padding: 0.5em;
+    .media-figure {
+        display: flex;
+        &:last-child {
+            margin-left: 0.5em;
+        }
+        &:first-child {
+            margin-right: 0.5em;
+        }
+    }
+
+    .media-content {
+        flex-grow: 1;
+        > .header, > .footer {
+            display: flex;
+            flex-wrap: wrap;
+            .title {
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+        }
+
+        > .header {
+            margin-bottom: 0.25em;
+        }
+
+        > .footer {
+            margin-bottom: 0.25em;
+        }
+
+        > p {
+            margin: 0 0 0.5em 0;
+        }
+
+        > p + .media {
+            margin-top: 1rem;
+        }
+    }
+}

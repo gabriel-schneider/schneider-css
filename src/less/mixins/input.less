@@ -1,0 +1,35 @@
+// main: ../schneider.less
+.generate-button(@text-color, @background-color)
+{
+    color: @text-color;
+    background-color: @background-color;
+    &.link {
+        background-color: transparent;
+    }
+    &:hover {
+        background-color: lighten(@background-color, 2.5%);
+    }
+    &:active, &.active {
+        background-color: darken(@background-color, 5%);
+    }
+
+}
+
+.input-states() {
+    &.positive {
+        background-color: lighten(@color-positive, 45%);
+        border-bottom: 2px solid @color-positive;
+    }
+
+    &.warning {
+        color: darken(@color-warning, 25%);
+        background-color: lighten(@color-warning, 45%);
+        border-bottom: 2px solid @color-warning;
+    }
+
+    &.danger {
+        color: darken(@color-danger, 25%);
+        background-color: lighten(@color-danger, 45%);
+        border-bottom: 2px solid @color-danger;
+    }
+}

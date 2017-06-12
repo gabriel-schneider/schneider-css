@@ -1,0 +1,19 @@
+@import '../variables';
+
+.screen-small(@content) {
+    @media (min-width: @breakpoint-small-min) and (max-width: @breakpoint-small-max) {
+        @content();
+    }
+}
+
+.screen-medium(@content) {
+    @media (min-width: @breakpoint-medium-min) and (max-width: @breakpoint-medium-max) {
+        @content();
+    }
+}
+
+.screen-large(@content) {
+    @media (min-width: @breakpoint-large-min) {
+        @content();
+    }
+}

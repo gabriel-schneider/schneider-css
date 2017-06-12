@@ -1,0 +1,53 @@
+// main: schneider.less
+
+/* Hide */
+.screen-small({
+    &.hide-small, &.only-medium, &.only-large, &.hide-mobile  {
+        display: none !important;
+    }
+});
+
+.screen-medium({
+    &.hide-medium, &.only-small, &.only-large, &.only-mobile {
+        display: none !important;
+    }
+});
+
+.screen-large({
+    &.hide-large, &.only-small, &.only-medium, &.only-mobile {
+        display: none !important;
+    }
+});
+
+.rounded {
+    border-radius: @border-radius;
+}
+
+/* Flexbox */
+
+.align-end {
+    align-self: end;
+}
+
+.align-start {
+    align-self: flex-start;
+}
+
+.right {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

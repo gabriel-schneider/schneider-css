@@ -1,0 +1,148 @@
+// main: schneider.less
+
+@import 'variables';
+
+.topbar {
+    display: flex;
+    align-items: center;
+    background-color: @topbar-background-color;
+    color: @topbar-color;
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .logo {
+        display: inline-block;
+        align-self: flex-start;
+        margin: 0.5rem 0.5rem;
+        white-space: nowrap;
+    }
+
+    nav {
+        margin-left: auto;
+        align-self: stretch;
+    }
+
+    nav a {
+        color: inherit;
+        &:hover {
+            background-color: @topbar-nav-item-background-color;
+        }
+    }
+
+    .offscreen-open {
+        margin: 0 1em;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: stretch;
+
+    &.vertical {
+        flex-direction: column;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &.rounded a {
+        &:first-child:hover {
+            border-top-left-radius: @border-radius;
+            border-bottom-left-radius: @border-radius;
+        }
+        &:last-child:hover {
+            border-top-right-radius: @border-radius;
+            border-bottom-right-radius: @border-radius;
+        }
+    }
+
+    &.icon-top a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        > i.fa {
+            font-size: 1.5em;
+            margin-bottom: 0.25em;
+        }
+    }
+
+    &:not(.icon-top) a > i.fa:first-child {
+        margin-right: 0.25em;
+    }
+
+    a.submenu-open > .submenu-indicator {
+        transform: rotate(-90deg);
+    }
+
+    a > .submenu-indicator {
+        //color: lighten(@color-text, 20%);
+        font-size: 0.875em;
+        margin-left: auto;
+        transition: transform 100ms;
+    }
+
+    a {
+        padding: @nav-item-padding*0.75 @nav-item-padding;
+    }
+
+    .group-title {
+        padding: @nav-item-padding*0.25 @nav-item-padding;
+        .sub;
+    }
+}
+
+.offscreen-open, .offscreen-close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    > i.fa {
+        pointer-events: none;
+    }
+}
+
+.offscreen-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.offscreen-menu {
+    position: fixed;
+    z-index: 100;
+    width: 80%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 200ms;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    background-color: white;
+    font-size: 1.2rem;
+
+    &.open {
+        transform: translateX(0%);
+    }
+
+    .offscreen-close {
+        padding: 1rem;
+        display: block;
+    }
+
+    nav a {
+        padding: 1.25rem;
+        justify-content: center;
+    }
+}

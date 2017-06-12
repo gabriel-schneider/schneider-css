@@ -1,0 +1,72 @@
+// main: schneider.less
+
+@import 'variables';
+@import 'mixins/grid';
+@import 'mixins/media-query';
+
+.grid {
+    > .row {
+        display: flex;
+        flex-wrap: wrap;
+
+        &.row-center {
+            justify-content: center;
+        }
+
+        &.row-around {
+            justify-content: space-around;
+        }
+
+        &.row-right {
+            justify-content: flex-end;
+        }
+
+        &.row-between {
+            justify-content: space-between;
+        }
+
+
+        /* Column */
+        [class*="col"] {
+            //align-self: flex-start;
+            box-sizing: border-box;
+            flex-basis: auto;
+            &:not(.gutterless) {
+                padding: 0.25rem;
+            }
+
+            &.col-start {
+                align-self: flex-start;
+            }
+
+            &.col-center {
+                align-self: center;
+            }
+
+            &.col-end {
+                align-self: flex-end;
+            }
+
+            &.col-stretch {
+                align-self: stretch;
+            }
+        }
+
+        .col {
+            flex-grow: 1;
+        }
+
+        .generate-columns(@grid-column-number);
+        .screen-small({
+            .generate-columns-small(@grid-column-number);
+        });
+        .screen-medium({
+            .generate-columns-medium(@grid-column-number);
+        });
+        .screen-large({
+            .generate-columns-large(@grid-column-number);
+        });
+
+
+    }
+}

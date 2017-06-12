@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Schneider CSS Framework</title>
+        <link rel="stylesheet" href="../vendor/normalize.css" />
+        <link rel="stylesheet" href="../dist/schneider.min.css" />
+        <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+        <style>
+            *, *:after, *:before {
+                box-sizing: border-box;
+            }
+
+            .grid {
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras <a has-dropdown>eget odio a</a>
+                        <div class="dropdown">
+                            <nav class="vertical">
+                                <a href="#">Item 1</a>
+                                <a href="#">Item 2</a>
+                                <a href="#">Item 3</a>
+                            </nav>
+                        </div>dui luctus tincidunt. Suspendisse malesuada eu nunc nec blandit. Pellentesque egestas gravida magna, sit amet bibendum justo interdum id. Nulla sed ex ac nunc facilisis rhoncus a vel tellus. Phasellus at libero vel sem consectetur commodo sed vitae sapien. Phasellus sed consectetur eros, a malesuada massa. Ut in augue sit amet neque vulputate ullamcorper. Sed justo libero, dapibus semper est a, consequat finibus enim. Cras tristique facilisis dolor, non dictum nisl auctor in.
+
+                    </div>
+                    <a class="button" has-dropdown>Click me!</a>
+                    <div class="dropdown">
+                        <nav class="vertical">
+                            <a href="#">Item 1</a>
+                            <a href="#" has-dropdown>Item 2</a>
+                            <div class="dropdown">
+                                <nav class="vertical">
+                                    <a href="#">Item 1</a>
+                                    <a href="#">Item 2</a>
+                                    <a href="#">Item 3</a>
+                                </nav>
+                            </div>
+                            <a href="#">Item 3</a>
+                            <span href="#" class="group-title">Header</span>
+                            <a href="#">Item 4</a>
+                            <a href="#">Item 5</a>
+                            <a href="#">Item 6</a>
+                        </nav>
+                    </div>
+                    <a class="button" style="float: right;" has-dropdown>Click me!</a>
+                    <div class="dropdown">
+                        <div class="media">
+                            <div class="media-figure">
+                                <img src="images/sample_user1.jpg" class="tiny"/>
+                            </div>
+                            <div class="media-content">
+                                <div class="header">
+                                    <span class="title">Giovanna Markelove</span>
+                                </div>
+                                <p>
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="../vendor/jquery.min.js" ></script>
+        <script src="../dist/schneider.js" ></script>
+    </body>
+</html>

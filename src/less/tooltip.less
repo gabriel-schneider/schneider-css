@@ -1,0 +1,39 @@
+// main: schneider.less
+
+.tooltip {
+    position: relative;
+    &:before, &:after {
+        opacity: 0.5;
+        left: 50%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 150ms;
+        pointer-events: none;
+    }
+
+    &:hover:before, &:hover:after {
+        opacity: 1;
+    }
+
+    &:before {
+        border-style : solid;
+        border-width : .5em .5em 0 .5em;
+        border-color : #212121 transparent transparent transparent;
+        bottom: 80%;
+        content: " ";
+    }
+
+    &:after {
+        background-color: #212121;
+        color: white;
+        width: 20em;
+        text-align: center;
+        margin-left: -10em;
+        font-size: 0.875em;
+        padding: 0.5em;
+        //bottom: 180%;
+        bottom: 120%;
+        border-radius: @border-radius;
+        content: attr(data-tip);
+    }
+}

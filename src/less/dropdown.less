@@ -1,0 +1,29 @@
+// main: schneider.less
+
+[has-dropdown] {
+    cursor: pointer;
+}
+
+div.dropdown {
+    white-space: nowrap;
+    position: absolute;
+    display: none;
+    min-width: 8rem;
+
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+    // &.open {
+    //     display: block;
+    // }
+
+    nav {
+        a {
+            color: @color-text;
+        }
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}

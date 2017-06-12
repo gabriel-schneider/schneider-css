@@ -1,0 +1,45 @@
+// out: ../../dist/schneider.min.css, compress: true
+
+@import 'variables';
+@import 'grid';
+@import 'typography';
+@import 'util';
+@import 'input';
+@import 'button';
+@import 'navigation';
+@import 'media';
+@import 'accordion';
+@import 'image';
+@import 'tooltip';
+@import 'dropdown';
+@import 'tag';
+@import 'addons/selectize.schneider.less';
+
+.example {
+
+    font-family: @font-family-mono;
+    //white-space: pre;
+    background-color: @color-cloud;
+    border: 2px solid @color-primary;
+    .rounded;
+    padding: 1rem;
+    margin-top: 2rem;
+    pre {
+        font-family: @font-family-mono;
+        margin: 0;
+    }
+    &:before {
+        content: @text-example;
+        position: absolute;
+        margin-top: -2.5rem;
+        margin-left: -0.75rem;
+        padding: 0.25rem 0.5rem;
+        line-height: 1rem;
+        font-size: 0.875rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: none;
+        background-color: @color-primary;
+        color: white;
+    }
+}

@@ -1,0 +1,14 @@
+// main: ../schneider.less
+
+/* Dont use it! Its evil! */
+.generate-headers(@n, @i: 1) when (@i =< @n) {
+    h@{i} {
+        @s: pow(1.250, (@n + 1) - @i);
+        //margin-top: unit(@s*0.3, em);
+        font-size: unit(@s, em);
+        + .subtitle {
+            margin-top: unit(-@s*0.5, rem);
+        }
+    }
+    .generate-headers(@n, (@i + 1));
+}

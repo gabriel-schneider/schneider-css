@@ -1,0 +1,198 @@
+<style>
+    [class*='col'] > p {
+        margin: 0;
+        padding: 1.5em;
+
+        background-color: #0095E9;
+        color: white;
+        text-align: center;
+        /*vertical-align: middle;*/
+        border-radius: 4px;
+        height: 100%;
+    }
+    .border {
+        padding: 0.5rem;
+        background-color: #e0e0e0;
+        border: 2px dashed #cfcbcb;
+    }
+
+    .demo-big-height {
+        height: 224px;
+        /*line-height: 224px;*/
+    }
+
+    .grid {
+        margin-bottom: 4rem;
+    }
+</style>
+
+<div class="text-content">
+    <h1>Grids</h1>
+</div>
+
+<div class="grid">
+    <div class="row">
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <p>4/12</p>
+        </div>
+        <div class="col-4">
+            <p>4/12</p>
+        </div>
+        <div class="col-4">
+            <p>4/12</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p>6/12</p>
+        </div>
+        <div class="col-6">
+            <p>6/12</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="example">
+                <pre>Code here...</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="text-content">
+        <h3 class="dashed dashed-center">Responsive</h3>
+        <p>Columns can change size according to the viewport size.</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <p>A</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <p>B</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <p>C</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <p>D</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="example">
+                <pre>Code here...</pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="text-content">
+        <h3 class="dashed dashed-center">Row Alignment</h3>
+        <p>Align columns using the same flexbox property values.</p>
+    </div>
+    <div class="text-content">
+        <h4 class="dashed dashed-left">Right</h4>
+    </div>
+    <div class="row row-right">
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+    </div>
+    <div class="text-content">
+        <h4 class="dashed dashed-left">Center</h4>
+    </div>
+    <div class="row row-center">
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+    </div>
+    <div class="text-content">
+        <h4 class="dashed dashed-left">Around</h4>
+    </div>
+    <div class="row row-around">
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+    </div>
+    <div class="text-content">
+        <h4 class="dashed dashed-left">Between</h4>
+    </div>
+    <div class="row row-between">
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+        <div class="col-3">
+            <p>3/12</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="example">
+                <pre>Code here...</pre>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="text-content">
+        <h3 class="dashed dashed-center">Column Content Alignment</h3>
+        <p>The items inside columns can be align as well.</p>
+    </div>
+    <div class="row demo-big-height">
+        <div class="col-3 col-start">
+            <p>Start</p>
+        </div>
+        <div class="col-3 col-center">
+            <p>Center</p>
+        </div>
+        <div class="col-3 col-end">
+            <p>End</p>
+        </div>
+        <div class="col-3 col-stretch">
+            <p><strong>Stretch</strong><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a interdum nibh, at aliquam risus. In nec venenatis lectus. Sed at quam blandit, laoreet.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="example">
+                <pre>Code here...</pre>
+            </div>
+        </div>
+    </div>
+</div>

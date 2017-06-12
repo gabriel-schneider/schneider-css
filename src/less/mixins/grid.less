@@ -1,0 +1,31 @@
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+    .col-@{i} {
+        width: (@i * 100% / @n);
+        min-width: (@i * 100% / @n);
+    }
+    .generate-columns(@n, (@i + 1));
+}
+
+.generate-columns-large(@n, @i: 1) when (@i =< @n) {
+    .col-lg-@{i} {
+        width: (@i * 100% / @n);
+        min-width: (@i * 100% / @n);
+    }
+    .generate-columns-large(@n, (@i + 1));
+}
+
+.generate-columns-medium(@n, @i: 1) when (@i =< @n) {
+    .col-md-@{i} {
+        width: (@i * 100% / @n);
+        min-width: (@i * 100% / @n);
+    }
+    .generate-columns-medium(@n, (@i + 1));
+}
+
+.generate-columns-small(@n, @i: 1) when (@i =< @n) {
+    .col-sm-@{i} {
+        width: (@i * 100% / @n);
+        min-width: (@i * 100% / @n);
+    }
+    .generate-columns-small(@n, (@i + 1));
+}

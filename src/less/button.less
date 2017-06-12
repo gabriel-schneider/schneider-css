@@ -1,0 +1,69 @@
+// main: schneider.less
+
+@import 'variables';
+@import 'mixins/input';
+
+a.button {
+    text-decoration: none;
+}
+
+.button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5em 1em;
+    border-radius: 1px;
+    max-height: 2em;
+    line-height: 1em;
+    text-align: center;
+    transition: background-color 100ms, transform 100ms;
+    cursor: pointer;
+
+    /* Button Click Animation */
+    & when (@button-effect-on-click = true)
+    {
+        &:active {
+            transform: scale(0.95, 0.95);
+        }
+    }
+
+    > i {
+        pointer-events: none;
+    }
+
+    .noselect;
+
+    /* Icon only */
+    &.icon {
+        overflow: hidden;
+        padding: 0.5em 0.5em;
+        width: 2em;
+        &.circle {
+            border-radius: 50%;
+        }
+    }
+
+    /* Default */
+    .generate-button(darken(@color-gray, 75%), @color-gray);
+
+    /* Danger, Error, Negative */
+    &.danger {
+        .generate-button(white, @color-danger);
+    }
+
+    /* Warning, Caution */
+    &.warning {
+        .generate-button(white, @color-warning);
+    }
+
+    /* Positive, Success, Confirm */
+    &.positive {
+        .generate-button(white, @color-positive);
+    }
+
+    /* Notice, Informative */
+    &.notice {
+        .generate-button(white, @color-notice);
+    }
+}

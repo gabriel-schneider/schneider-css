@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Schneider CSS Framework</title>
+        <link rel="stylesheet" href="../vendor/normalize.css" />
+        <link rel="stylesheet" href="../dist/schneider.min.css" />
+        <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+
+        <style>
+            *, *:after, *:before {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin-top: 1rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10rem;
+            }
+
+            .content {
+                padding: 1rem 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h2>Input</h2>
+            <h4 class="subtitle">Buttons, text fields and form stuff.</h4>
+        </div>
+        <div class="content">
+            <hr/>
+            <h3>Standard</h3>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <a href="#" class="button">Button</a>
+                <a href="#" class="button notice">Button</a>
+                <a href="#" class="button positive">Button</a>
+                <a href="#" class="button warning">Button</a>
+                <a href="#" class="button danger">Button</a>
+            </div>
+            <div class="row" style="font-size: 1.5rem;">
+                <a href="#" class="button">Button</a>
+                <a href="#" class="button notice">Button</a>
+                <a href="#" class="button positive">Button</a>
+                <a href="#" class="button warning">Button</a>
+                <a href="#" class="button danger">Button</a>
+            </div>
+        </div>
+        <div class="content">
+            <hr/>
+            <h3>Standard + Icons</h3>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <a href="#" class="button"><i class="fa fa-coffee" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button notice"><i class="fa fa-paper-plane" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button positive"><i class="fa fa-check" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button warning"><i class="fa fa-download" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button danger"><i class="fa fa-heart" aria-hidden="true"></i> Button</a>
+            </div>
+            <div class="row" style="font-size: 1.5rem;">
+                <a href="#" class="button"><i class="fa fa-coffee" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button notice"><i class="fa fa-paper-plane" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button positive"><i class="fa fa-check" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button warning"><i class="fa fa-download" aria-hidden="true"></i> Button</a>
+                <a href="#" class="button danger"><i class="fa fa-heart" aria-hidden="true"></i> Button</a>
+            </div>
+        </div>
+        <div class="content">
+            <hr/>
+            <h3>Icons and Icons + Circles</h3>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <a href="#" class="button icon"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <a href="#" class="button notice icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                <a href="#" class="button positive icon"><i class="fa fa-check" aria-hidden="true"></i></a>
+                <a href="#" class="button warning icon"><i class="fa fa-download" aria-hidden="true"></i></a>
+                <a href="#" class="button danger icon"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                <a href="#" class="button icon circle"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <a href="#" class="button notice icon circle"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                <a href="#" class="button positive icon circle"><i class="fa fa-check" aria-hidden="true"></i></a>
+                <a href="#" class="button warning icon circle"><i class="fa fa-download" aria-hidden="true"></i></a>
+                <a href="#" class="button danger icon circle"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </div>
+            <div class="row" style="font-size: 1.5rem;">
+                <a href="#" class="button icon"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <a href="#" class="button notice icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                <a href="#" class="button positive icon"><i class="fa fa-check" aria-hidden="true"></i></a>
+                <a href="#" class="button warning icon"><i class="fa fa-download" aria-hidden="true"></i></a>
+                <a href="#" class="button danger icon"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                <a href="#" class="button icon circle"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <a href="#" class="button notice icon circle"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                <a href="#" class="button positive icon circle"><i class="fa fa-check" aria-hidden="true"></i></a>
+                <a href="#" class="button warning icon circle"><i class="fa fa-download" aria-hidden="true"></i></a>
+                <a href="#" class="button danger icon circle"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <hr/>
+            <h3>Text Fields</h3>
+        </div>
+        <form class="form">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-3">
+                        <label>Default</label>
+                        <input class="input" type="text" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <label>Positive</label>
+                        <input class="input positive" type="text" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <label>Warning</label>
+                        <input class="input warning" type="text" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <label>Danger</label>
+                        <input class="input danger" type="text" value="Lorem Ipsum"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <input class="input" type="password" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input positive" type="password" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input warning" type="password" value="Lorem Ipsum"/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input danger" type="password" value="Lorem Ipsum"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <input class="input" type="text" placeholder="Placeholder..."/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input positive" type="text" placeholder="Placeholder..."/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input warning" type="text" placeholder="Placeholder..."/>
+                    </div>
+                    <div class="col-3">
+                        <input class="input danger" type="text" placeholder="Placeholder..."/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="input-icon">
+                            <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon positive">
+                            <span class="icon"><i class="fa fa-question" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon warning">
+                            <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon danger">
+                            <span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="font-size: 1.5rem;">
+                    <div class="col-3">
+                        <div class="input-icon">
+                            <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon positive">
+                            <span class="icon"><i class="fa fa-question" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon warning">
+                            <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-icon danger">
+                            <span class="icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            <input class="input" type="text" placeholder="Placeholder..."/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="content">
+            <hr/>
+            <h3>Checkboxes and Radiobuttons</h3>
+        </div>
+        <form class="form">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="content">
+                            <h4>Inline</h4>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checkbox-1"/>
+                            <label for="checkbox-1"><span></span>Earth</label>
+                            <input type="checkbox" id="checkbox-2"/>
+                            <label for="checkbox-2"><span></span>Jupiter</label>
+                            <input type="checkbox" id="checkbox-3"/>
+                            <label for="checkbox-3"><span></span>Saturn</label>
+                        </div>
+                        <div class="content">
+                            <h4>Block / Group</h4>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="checkbox-4"/>
+                            <label for="checkbox-4"><span></span>Earth</label>
+                            <input type="checkbox" id="checkbox-5"/>
+                            <label for="checkbox-5"><span></span>Jupiter</label>
+                            <input type="checkbox" id="checkbox-6"/>
+                            <label for="checkbox-6"><span></span>Saturn</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="content">
+                            <h4>Inline</h4>
+                        </div>
+                        <div>
+                            <input type="radio" name="planets" id="radio-1"/>
+                            <label for="radio-1"><span></span>Earth</label>
+                            <input type="radio" name="planets" id="radio-2"/>
+                            <label for="radio-2"><span></span>Jupiter</label>
+                            <input type="radio" name="planets" id="radio-3"/>
+                            <label for="radio-3"><span></span>Saturn</label>
+                        </div>
+                        <div class="content">
+                            <h4>Block / Group</h4>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" name="planets2" id="radio-4"/>
+                            <label for="radio-4"><span></span>Earth</label>
+                            <input type="radio" name="planets2" id="radio-5"/>
+                            <label for="radio-5"><span></span>Jupiter</label>
+                            <input type="radio" name="planets2" id="radio-6"/>
+                            <label for="radio-6"><span></span>Saturn</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="content">
+            <hr/>
+            <h3>Textarea</h3>
+        </div>
+        <form class="form">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-3">
+                        <textarea class="input" placeholder="Placeholder..."></textarea>
+                    </div>
+                    <div class="col-3">
+                        <textarea class="input positive" placeholder="Placeholder..."></textarea>
+                    </div>
+                    <div class="col-3">
+                        <textarea class="input warning" placeholder="Placeholder..."></textarea>
+                    </div>
+                    <div class="col-3">
+                        <textarea class="input danger" placeholder="Placeholder..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </body>
+</html>

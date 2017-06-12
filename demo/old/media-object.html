@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Schneider CSS Framework</title>
+        <link rel="stylesheet" href="../vendor/normalize.css" />
+        <link rel="stylesheet" href="../dist/schneider.min.css" />
+        <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+        <style>
+            *, *:after, *:before {
+                box-sizing: border-box;
+            }
+
+            .grid {
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="content">
+                        <h1>Media Objects</h1>
+                        <h4 class="subtitle">
+                            With media objects is possible to create comment-like sections.<br />
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="content">
+                        <h4>SIMPLE EXAMPLE</h4>
+                    </div>
+                    <div class="media">
+                        <div class="media-figure">
+                            <img src="images/sample_user1.jpg" class="tiny"/>
+                        </div>
+                        <div class="media-content">
+                            <div class="header">
+                                <span class="title">Giovanna Markelove</span>
+                                <a class="sub right">38 <i class="fa fa-heart" aria-hidden="true"></i></a>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere elementum est, id ornare lorem ullamcorper ut.
+                            </p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="media">
+                        <div class="media-content">
+                            <div class="header">
+                                <span class="title right">Giovanna Markelove</span>
+                            </div>
+                            <p class="text-right">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere elementum est, id ornare lorem ullamcorper ut.
+                            </p>
+                        </div>
+                        <div class="media-figure">
+                            <img src="images/sample_user1.jpg" class="tiny"/>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4>USING DATES AND FIGURES</h4>
+                    </div>
+                    <div class="media">
+                        <div class="media-figure">
+                            <img src="images/sample_user1.jpg" class="tiny"/>
+                        </div>
+                        <div class="media-content">
+                            <div class="header">
+                                <span class="title">Giovanna Markelove</span>
+                                <div style="width: 100%">
+                                    <span class="sub">hoje às 16:40</span>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere elementum est, id ornare lorem ullamcorper ut.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-figure">
+                            <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-content">
+                            <div class="header">
+                                <span class="title">Giovanna Markelove</span>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere elementum est, id ornare lorem ullamcorper ut.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="content">
+                        <h4>NESTED MEDIA OBJECT</h4>
+                    </div>
+                    <div class="media">
+                        <div class="media-figure">
+                            <img src="images/sample_user1.jpg" class="tiny"/>
+                        </div>
+                        <div class="media-content">
+                            <div class="header">
+                                <span class="title">Giovanna Markelove</span>
+                                <span class="sub">hoje às 16:40</span>
+                            </div>
+                            <p>
+                                This is a test with media objects and everything is working fine until now.
+                            </p>
+                            <div class="media">
+                                <div class="media-figure">
+                                    <img src="images/sample_user2.jpg" class="icon"/>
+                                </div>
+                                <div class="media-content">
+                                    <div class="header">
+                                        <span class="title">Ramon Caldwell</span>
+                                        <span class="sub">hoje às 16:45</span>
+                                    </div>
+                                    <p>
+                                        Media objects can contain other media objects, just like a comment section!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-figure">
+                                    <img src="images/sample_user1.jpg" class="icon"/>
+                                </div>
+                                <div class="media-content">
+                                    <div class="header">
+                                        <span class="title">Ramon Caldwell</span>
+                                        <span class="sub">hoje às 16:45</span>
+                                    </div>
+                                    <p>
+                                        I know right!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../vendor/jquery.min.js" ></script>
+    </body>
+</html>

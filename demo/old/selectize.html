@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Schneider CSS Framework</title>
+        <link rel="stylesheet" href="../vendor/normalize.css" />
+        <link rel="stylesheet" href="../dist/schneider.min.css" />
+        <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../vendor/selectize.js/dist/css/selectize.schneider.css" />
+        <style>
+            *, *:after, *:before {
+                box-sizing: border-box;
+            }
+
+            .grid {
+                margin-top: 4rem;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            div.apm-item .title, div.apm-item .description{
+                display: block;
+            }
+
+            div.apm-item .title {
+                font-weight: bold;
+                margin-bottom: 0.25em;
+            }
+
+            div.apm-item .description {
+                color: gray;
+                font-size: 0.875em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form id="form">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            The framework use <a href="http://selectize.github.io/selectize.js/">selectize.js</a> to give <code>select</code> tags a beautiful look and power functionality.
+                        </div>
+                        <div class="content">
+                            Input for working with tags:
+                        </div>
+                        <form>
+                            <input type="text" id="tags"/>
+                        </form>
+                        <div class="content">
+                            A simple <code>select</code> but it's works.
+                        </div>
+                        <form>
+                            <select class="input" for="form">
+                                <option value="earth">Earth</option>
+                                <option value="saturn">Saturn</option>
+                                <option value="jupiter">Jupiter</option>
+                                <option value="venus">Venus</option>
+                            </select>
+                        </form>
+                        <div class="content">
+                            Working with tags fetching from the Atom Package Manager API:
+                        </div>
+                        <form>
+                            <input type="text" id="apm"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script src="../vendor/jquery.min.js" ></script>
+        <script src="../vendor/selectize.js/dist/js/standalone/selectize.min.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $('select').selectize();
+                $('#tags').selectize({
+                    persist: false,
+                    createOnBlur: true,
+                    create: true
+                });
+                //https://randomuser.me/api/?seed=schneider&results=10
+                $('#apm').selectize({
+                    valueField: 'name',
+                    labelField: 'name',
+                    searchField: 'name',
+                    options: [],
+                    create: false,
+                    render: {
+                        option: function(item, escape) {
+                            return '<div class="apm-item">' +
+                            '<span class="title">' + item.name + '</span>' +
+                            '<span class="description">' + item.downloads + ' downloads</span>' +
+                            + '</div>'
+                        }
+                    },
+                    score: function(search) {
+                        var score = this.getScoreFunction(search);
+                        return function(item) {
+                            return score(item) * (1 + Math.min(item.downloads / 100, 1));
+                        };
+                    },
+                    load: function(query, callback)
+                    {
+                        if (!query.length) return callback();
+                        $.ajax({
+                            url: 'https://www.atom.io/api/packages/search?q=' + encodeURIComponent(query),
+                            type: 'GET',
+                            error: function() {
+                                callback();
+                            },
+                            success: function(res) {
+                                console.log(res);
+                                callback(res.slice(0, 10));
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

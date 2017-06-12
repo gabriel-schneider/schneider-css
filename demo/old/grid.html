@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Schneider CSS Framework</title>
+        <link rel="stylesheet" href="../vendor/normalize.css" />
+        <link rel="stylesheet" href="../dist/schneider.min.css" />
+        <style>
+            *, *:after, *:before {
+                box-sizing: border-box;
+            }
+
+            body {
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .grid.debug .row > [class*="col-"] > p {
+                border-radius: 3px;
+                background-color: #3498db;
+                color: white;
+                padding: 1rem;
+                text-align: center;
+                margin: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h2>Grids</h2>
+            <h4 class="subtitle">Some examples and stuff</h4>
+        </div>
+        <div class="grid debug">
+            <div class="row">
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+                <div class="col-2">
+                    <p>Lorem</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="col-3">
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="col-3">
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="col-3">
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="col-6">
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Sizes</h2>
+        </div>
+        <div class="grid debug">
+            <div class="row">
+                <div class="col-1 col-sm-12">
+                    <p>1</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 col-sm-12">
+                    <p>2</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-12">
+                    <p>3</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-sm-12">
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 col-sm-12">
+                    <p>5</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-12">
+                    <p>6</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7 col-sm-12">
+                    <p>7</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 col-sm-12">
+                    <p>8</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9 col-sm-12">
+                    <p>9</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-12">
+                    <p>10</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-11 col-sm-12">
+                    <p>11</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <p>12</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Responsive Test</h2>
+        </div>
+        <div class="grid debug">
+            <div class="row">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <p>A</p>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <p>B</p>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <p>C</p>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <p>D</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

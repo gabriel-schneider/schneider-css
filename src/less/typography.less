@@ -1,0 +1,174 @@
+// main: schneider.less
+
+@import 'variables';
+@import 'mixins/media-query';
+@import 'mixins/typography';
+ @import url('https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400,700');
+
+body {
+    font-family: @font-family-sans;
+    font-size: @font-size;
+    color: @color-text;
+}
+
+
+.sub {
+    color: gray;
+    font-size: 0.875em;
+}
+
+.text-content {
+    overflow: hidden;
+
+    /* Paragraph */
+    p {
+        line-height: 1.6em;
+    }
+
+    /* Headers */
+    h1, h2, h3, h4 {
+        margin: 0.5em 0 0.5em;
+        font-weight: inherit;
+        line-height: 1.25em;
+        &:not(.subtitle) {
+            + .subtitle {
+                margin-top: -0.875em;
+            }
+        }
+
+        &.dashed {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            text-align: center;
+
+            &:before, &:after {
+                content: '\a0';
+                height: 1px;
+                position: relative;
+                top: 0.5em;
+            }
+
+            &-center {
+                &:before, &:after {
+                    background-color: @color-gray;
+                    flex-grow: 1;
+                    margin: 0 1rem;
+                }
+            }
+
+            &-left {
+                &:after {
+                    background-color: @color-gray;
+                    flex-grow: 1;
+                    margin: 0 1rem;
+                }
+            }
+
+            &-right {
+                &:before {
+                    background-color: @color-gray;
+                    flex-grow: 1;
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 2.441em;
+    }
+
+    h2 {
+        font-size: 1.953em;
+    }
+
+    h3 {
+        font-size: 1.563em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    .subtitle {
+        display: block;
+        color: gray;
+    }
+
+    /* Small */
+    small, .font-small {
+        font-size: 0.75em;
+    }
+
+    /* Horizontal Rule */
+    hr {
+        border: 0;
+        border-bottom: 1px solid #e0e0e0;
+        margin: 0rem;
+    }
+
+    /* Image */
+    img {
+        margin: 0.5rem 0;
+        background-color: ghostwhite;
+        width: 100%;
+    }
+
+    /* Link */
+    a {
+        color: @color-link;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    /* List */
+    ul, ol {
+        margin: 1rem 0;
+        li {
+            line-height: 1.5em;
+        }
+    }
+
+    /* Description List */
+    dl {
+        margin: 0 0 1rem 0;
+        > dt {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        > dd {
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    /* Blockquote */
+    blockquote {
+        padding: 1rem;
+        margin: 0 0 1rem 0;
+        border-left: 4px solid #e0e0e0;
+        cite {
+            font-weight: bold;
+            &:before {
+                content: "\2014\00a0";
+            }
+        }
+    }
+
+    /* Code */
+    code {
+        font-family: @font-family-mono;
+        background-color: #ececec;
+        color: inherit;
+        padding: 2px;
+    }
+}
