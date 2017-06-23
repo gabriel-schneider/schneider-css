@@ -15,12 +15,23 @@
 
             body {
                 max-width: 960px;
+                height: 100vh;
                 margin: 0 auto 224px auto;
             }
-
         </style>
     </head>
     <body>
+        <header class="navigation">
+                <div class="brand">
+                    <h1>Logo Text</h1>
+                </div>
+                <nav class="menu horizontal">
+                    <a>Item A</a>
+                    <a>Item B</a>
+                    <a>Item C</a>
+                    <a>Item D</a>
+                </nav>
+        </header>
         <?= $content ?>
         <footer>
             <script src="../vendor/jquery.min.js"></script>

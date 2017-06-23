@@ -2,6 +2,16 @@
 
 @import 'variables';
 
+header.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    &.vertical-stretch {
+        align-items: stretch;
+    }
+}
+
 .topbar {
     display: flex;
     align-items: center;
@@ -21,12 +31,12 @@
         white-space: nowrap;
     }
 
-    nav {
+    nav.nav {
         margin-left: auto;
         align-self: stretch;
     }
 
-    nav a {
+    nav.nav a {
         color: inherit;
         &:hover {
             background-color: @topbar-nav-item-background-color;
@@ -38,12 +48,16 @@
     }
 }
 
-nav {
+.menu {
     display: flex;
     align-items: stretch;
 
     &.vertical {
         flex-direction: column;
+    }
+
+    &.vertical {
+        flex-direction: row;
     }
 
     a {
@@ -52,6 +66,10 @@ nav {
         text-align: center;
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
     }
 
     &.rounded a {
@@ -85,7 +103,6 @@ nav {
     }
 
     a > .submenu-indicator {
-        //color: lighten(@color-text, 20%);
         font-size: 0.875em;
         margin-left: auto;
         transition: transform 100ms;
@@ -98,51 +115,5 @@ nav {
     .group-title {
         padding: @nav-item-padding*0.25 @nav-item-padding;
         .sub;
-    }
-}
-
-.offscreen-open, .offscreen-close {
-    cursor: pointer;
-    font-size: 1.5rem;
-    text-align: center;
-    > i.fa {
-        pointer-events: none;
-    }
-}
-
-.offscreen-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.offscreen-menu {
-    position: fixed;
-    z-index: 100;
-    width: 80%;
-    height: 100%;
-    transform: translateX(-100%);
-    transition: transform 200ms;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    background-color: white;
-    font-size: 1.2rem;
-
-    &.open {
-        transform: translateX(0%);
-    }
-
-    .offscreen-close {
-        padding: 1rem;
-        display: block;
-    }
-
-    nav a {
-        padding: 1.25rem;
-        justify-content: center;
     }
 }
