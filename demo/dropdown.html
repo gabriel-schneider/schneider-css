@@ -1,0 +1,48 @@
+<div class="grid">
+    <div class="row">
+        <div class="col-4">
+            <h3>Vertical Menu</h3>
+            <nav class="menu vertical">
+                <a href="#">Item A</a>
+                <a href="#" class="has-dropdown">Item B</a>
+                <div class="dropdown-menu">
+                    <nav class="menu vertical">
+                        <a href="#">Item B1</a>
+                        <a href="#">Item B2</a>
+                        <a href="#">Item B3</a>
+                    </nav>
+                </div>
+                <a href="#">Item C</a>
+                <a href="#">Item D</a>
+            </nav>
+        </div>
+        <div class="col-8">
+            <h3>Horizontal Menu</h3>
+            <nav class="menu horizontal">
+                <a href="#">Item A</a>
+                <a href="#" class="has-dropdown">Item B</a>
+                <div class="dropdown-menu">
+                    <nav class="menu vertical">
+                        <a href="#">Item B1</a>
+                        <a href="#">Item B2</a>
+                        <a href="#">Item B3</a>
+                    </nav>
+                </div>
+                <a href="#">Item C</a>
+                <a href="#">Item D</a>
+            </nav>
+            <div class="text-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus sit amet massa efficitur, vel elementum metus scelerisque. Ut eu lacus ut dui viverra feugiat eu at erat. Etiam eu enim id massa feugiat dapibus. Curabitur ante enim, <a href="#" class="has-dropdown" dropdown-id="my-dropdown">lobortis a euismod vitae</a>, eleifend quis enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec molestie ut ligula dapibus vehicula. Integer nec dolor sapien. Vestibulum viverra lorem tempor risus tristique venenatis. Quisque vitae nisi a urna commodo mollis. Nunc interdum, velit ut auctor tempor, nulla nulla faucibus mi, a dapibus enim nibh sit amet lacus. Aliquam porttitor neque magna, at venenatis erat varius sit amet. Aliquam eu feugiat tellus. Fusce eu ex ac erat lobortis luctus a eu magna.</p>
+                <p>Sed molestie ante lectus, in imperdiet sapien aliquam ut. Sed mollis nisl eu placerat imperdiet. Etiam faucibus purus erat, nec dignissim arcu tempus et. Nunc sit amet maximus velit, mattis posuere lacus. Nunc ac mi vel urna ornare rutrum. Fusce pharetra, sem ac blandit luctus, tellus justo mattis diam, eget suscipit magna velit id turpis. Sed quis risus sem. Etiam ornare, lectus eget euismod auctor, ante arcu gravida massa, non scelerisque dolor magna id elit. Mauris consectetur consectetur fringilla. Ut tristique leo interdum elementum sagittis. Quisque ut sapien sed sem imperdiet accumsan sit amet vitae dolor. Duis vitae mauris leo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="my-dropdown" class="dropdown-menu">
+    <nav class="menu vertical">
+        <a href="#">Item A</a>
+        <a href="#">Item B</a>
+        <a href="#">Item C</a>
+    </nav>
+</div>

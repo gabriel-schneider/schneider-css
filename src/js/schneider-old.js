@@ -14,7 +14,8 @@ $(document).ready(function() {
         }
     })
 
-    $('nav.vertical a.has-submenu').on('click', function() {
+    $('a.has-submenu').on('click', function() {
+        console.log('log')
         $(this).toggleClass('submenu-open');
         if ($(this).hasClass('submenu-open'))
         {

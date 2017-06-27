@@ -2,13 +2,18 @@
 
 @import 'variables';
 
-header.navigation {
+.navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     &.vertical-stretch {
         align-items: stretch;
+    }
+
+    >.menu {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -54,10 +59,6 @@ header.navigation {
 
     &.vertical {
         flex-direction: column;
-    }
-
-    &.vertical {
-        flex-direction: row;
     }
 
     a {
