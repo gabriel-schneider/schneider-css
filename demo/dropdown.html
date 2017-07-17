@@ -4,12 +4,24 @@
             <h3>Vertical Menu</h3>
             <nav class="menu vertical">
                 <a href="#">Item A</a>
-                <a href="#" class="has-dropdown">Item B</a>
-                <div class="dropdown-menu">
+                <a href="#" class="has-dropdown">
+                    <i class="icon fa fa-paper-plane" aria-hidden="true"></i>
+                    <span>Item B</span>
+                </a>
+                <div class="dropdown">
                     <nav class="menu vertical">
-                        <a href="#">Item B1</a>
-                        <a href="#">Item B2</a>
-                        <a href="#">Item B3</a>
+                        <a href="#"><span>Item B1</span></a>
+                        <a href="#" class="title"><span>Item B1</span></a>
+                        <a href="#" class="has-dropdown"><i class="icon fa fa-paper-plane" aria-hidden="true"></i><span>Item B2</span></a>
+                        <div class="dropdown">
+                            <nav class="menu vertical">
+                                <a href="#">Item B2.1</a>
+                                <a href="#">Item B2.2</a>
+                                <a href="#">Item B2.3</a>
+                            </nav>
+                        </div>
+                        <a href="#" class="separator"></a>
+                        <a href="#"><span>Item B3</span></a>
                     </nav>
                 </div>
                 <a href="#">Item C</a>
@@ -21,7 +33,7 @@
             <nav class="menu horizontal">
                 <a href="#">Item A</a>
                 <a href="#" class="has-dropdown">Item B</a>
-                <div class="dropdown-menu">
+                <div class="dropdown">
                     <nav class="menu vertical">
                         <a href="#">Item B1</a>
                         <a href="#">Item B2</a>
@@ -39,7 +51,7 @@
     </div>
 </div>
 
-<div id="my-dropdown" class="dropdown-menu">
+<div id="my-dropdown" class="dropdown">
     <nav class="menu vertical">
         <a href="#">Item A</a>
         <a href="#">Item B</a>
