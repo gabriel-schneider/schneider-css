@@ -2,13 +2,18 @@
 
 @import 'variables';
 
-header.navigation {
+.navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     &.vertical-stretch {
         align-items: stretch;
+    }
+
+    >.menu {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -56,20 +61,25 @@ header.navigation {
         flex-direction: column;
     }
 
-    &.vertical {
-        flex-direction: row;
-    }
-
     a {
         display: flex;
         align-items: center;
         text-align: center;
         text-decoration: none;
         color: inherit;
-        cursor: pointer;
-        &:hover {
+
+        &:hover:not(.title):not(.separator), &.active {
             background-color: rgba(0, 0, 0, 0.05);
+            cursor: pointer;
         }
+
+        .icon + span {
+            margin-left: 0;
+        }
+        span {
+            margin-left: 1.5rem;
+        }
+        padding: @nav-item-padding*0.75 @nav-item-padding;
     }
 
     &.rounded a {
@@ -86,7 +96,7 @@ header.navigation {
     &.icon-top a {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items:fa center;
         justify-content: center;
         > i.fa {
             font-size: 1.5em;
@@ -94,26 +104,28 @@ header.navigation {
         }
     }
 
-    &:not(.icon-top) a > i.fa:first-child {
-        margin-right: 0.25em;
+    &:not(.icon-top) a > .icon:first-child {
+        margin-right: 0.5em;
     }
 
-    a.submenu-open > .submenu-indicator {
-        transform: rotate(-90deg);
-    }
+    // a.submenu-open > .submenu-indicator {
+    //     transform: rotate(-90deg);
+    // }
+    //
+    // a > .submenu-indicator {
+    //     font-size: 0.875em;
+    //     margin-left: auto;
+    //     transition: transform 100ms;
+    // }
 
-    a > .submenu-indicator {
-        font-size: 0.875em;
-        margin-left: auto;
-        transition: transform 100ms;
-    }
-
-    a {
-        padding: @nav-item-padding*0.75 @nav-item-padding;
-    }
-
-    .group-title {
-        padding: @nav-item-padding*0.25 @nav-item-padding;
+    .title {
+        padding: @nav-item-padding*0.5 @nav-item-padding;
         .sub;
+    }
+
+    .separator {
+        margin: @nav-item-padding*0.5 @nav-item-padding;
+        padding: 0;
+        border-bottom: solid @color-gray 1px;
     }
 }

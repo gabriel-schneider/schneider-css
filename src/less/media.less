@@ -5,12 +5,13 @@
 .media {
     display: flex;
     flex-flow: row nowrap;
+    padding: 0.5em;
+
     &:not(:last-child)
     {
         margin-bottom: 0.5em;
     }
 
-    padding: 0.5em;
     .media-figure {
         display: flex;
         &:last-child {
@@ -23,21 +24,19 @@
 
     .media-content {
         flex-grow: 1;
-        > .header, > .footer {
+        > .media-header, > .media-footer {
             display: flex;
             flex-wrap: wrap;
-            .title {
-                font-weight: bold;
-                white-space: nowrap;
-            }
-
+            // .title {
+            //     white-space: nowrap;
+            // }
         }
 
-        > .header {
-            margin-bottom: 0.25em;
+        > .media-header {
+            margin: 0 0 0.25em 0 ;
         }
 
-        > .footer {
+        > .media-footer {
             margin-bottom: 0.25em;
         }
 
